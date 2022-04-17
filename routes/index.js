@@ -1,6 +1,7 @@
 const express = require('express');
 
 const authRouter = require('./auth');
+const roomRouter = require('./room');
 
 const router = express.Router();
 
@@ -10,5 +11,6 @@ router.get('/', function (req, res, next) {
 });
 
 router.use('/', authRouter);
+router.use('/room', roomRouter);
 
 module.exports = router;

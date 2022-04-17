@@ -27,6 +27,14 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
+      choice: {
+        type: DataTypes.ENUM('rock', 'paper', 'scissors'),
+        allowNull: false,
+      },
+      round: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
       score: DataTypes.INTEGER,
     },
     {

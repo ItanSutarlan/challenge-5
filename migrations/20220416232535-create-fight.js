@@ -24,7 +24,14 @@ module.exports = {
         },
         key: 'id',
       },
-
+      choice: {
+        type: Sequelize.ENUM('rock', 'paper', 'scissors'),
+        allowNull: false,
+      },
+      round: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+      },
       score: {
         type: Sequelize.INTEGER,
       },
